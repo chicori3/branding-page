@@ -19,7 +19,7 @@ export default function Home() {
                 {siteConfig.headline}
               </h1>
             </div>
-            <p className="max-w-xl text-base text-slate-600 sm:text-[0.98rem]">
+            <p className="max-w-xl text-base leading-relaxed text-slate-600 sm:max-w-2xl sm:text-[0.98rem] whitespace-pre-line">
               {siteConfig.summary}
             </p>
             <div className="flex flex-wrap gap-3">
@@ -36,10 +36,6 @@ export default function Home() {
                 이메일로 연락하기
               </a>
             </div>
-            <div className="rounded-3xl border border-slate-100 bg-slate-50/70 p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">철학</p>
-              <p className="mt-2 text-base font-medium text-slate-700">{siteConfig.philosophy}</p>
-            </div>
           </div>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
@@ -50,9 +46,7 @@ export default function Home() {
         </section>
 
         <section className="space-y-8 rounded-[32px] border border-white/70 bg-white p-6 shadow-[0_20px_70px_rgba(15,23,42,0.06)]">
-          <SectionHeading eyebrow="Projects" title="운영과 제품 병목을 없앤 대표 사례">
-            문제→접근→결과를 일관된 템플릿으로 정리해 빠르게 훑을 수 있도록 배치했습니다.
-          </SectionHeading>
+          <SectionHeading eyebrow="Projects" title="운영과 제품 병목을 없앤 대표 사례"/>
           <div className="grid gap-6 md:grid-cols-2">
             {projects.map((project) => (
               <ProjectCard key={project.title} {...project} />
