@@ -1,9 +1,6 @@
 import { highlights } from "@/data/highlights";
-import { impactItems } from "@/data/impactGrid";
 import { projects } from "@/data/projects";
 import { siteConfig } from "@/data/site";
-import { ContactCTA } from "@/components/ContactCTA";
-import { ImpactHighlight } from "@/components/ImpactHighlight";
 import { KpiCard } from "@/components/KpiCard";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -59,18 +56,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="space-y-8 rounded-[32px] border border-white/70 bg-gradient-to-br from-slate-900 via-slate-900/95 to-slate-900/90 p-6 text-white shadow-[0_30px_80px_rgba(15,23,42,0.08)]">
-          <SectionHeading eyebrow="Impact" title="숫자로 증명하는 실행 패턴" invert>
-            문제를 정의하고 실행 계획과 성과를 수치화하는 루틴을 그대로 담았습니다.
-          </SectionHeading>
-          <div className="grid gap-4 md:grid-cols-3">
-            {impactItems.map((item) => (
-              <ImpactHighlight key={item.label} {...item} variant="dark" />
-            ))}
-          </div>
-        </section>
-
-        <ContactCTA />
+        {/* Impact/Contact 섹션은 헤더 + 프로젝트에 통합되었습니다. 필요하면 여기서 새 섹션으로 확장하세요. */}
       </main>
     </div>
   );

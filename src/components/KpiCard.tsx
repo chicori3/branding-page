@@ -1,6 +1,14 @@
 import { Highlight } from "@/data/highlights";
 
+const chartStyles: Record<string, { beforeWidth: string; afterWidth: string; tone: "up" | "down" }> = {
+  "클라우드 비용": { beforeWidth: "w-full", afterWidth: "w-3/5", tone: "down" },
+  "배치 처리": { beforeWidth: "w-1/2", afterWidth: "w-full", tone: "up" },
+  "운영 자동화": { beforeWidth: "w-full", afterWidth: "w-1/5", tone: "down" },
+};
+
 export function KpiCard({ title, metric, before, after, description, ariaLabel }: Highlight) {
+  const chart = chartStyles[title] ?? { beforeWidth: "w-full", afterWidth: "w-3/4", tone: "up" };
+
   return (
     <div
       className="flex h-full flex-col rounded-2xl border border-slate-100 bg-white/80 p-5 shadow-[0_10px_40px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(15,23,42,0.12)]"
@@ -28,11 +36,28 @@ export function KpiCard({ title, metric, before, after, description, ariaLabel }
         </div>
       </dl>
 
-      <div className="mt-3 space-y-2">
-        <div className="h-2 rounded-full bg-slate-100">
-          <div className="h-2 w-3/5 rounded-full bg-emerald-500" aria-hidden="true" />
+      <div className="mt-3 space-y-3">
+        <div className="space-y-1">
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-slate-400">Before</p>
+          <div className="h-2 rounded-full bg-slate-100">
+            <div
+              className={`h-2 rounded-full bg-slate-400 ${chart.beforeWidth}`}
+              aria-hidden="true"
+            />
+          </div>
         </div>
-        <p className="text-xs text-slate-400">변화 폭을 직관적으로 보여주는 간단한 그래프입니다.</p>
+        <div className="space-y-1">
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-slate-400">After</p>
+          <div className="h-2 rounded-full bg-slate-100">
+            <div
+              className={`h-2 rounded-full ${
+                chart.tone === "up" ? "bg-emerald-500" : "bg-rose-500"
+              } ${chart.afterWidth}`}
+              aria-hidden="true"
+            />
+          </div>
+        </div>
+        <p className="text-xs text-slate-400">각 카드의 특성에 맞게 Before/After 비율을 시각적으로 표현했습니다.</p>
       </div>
 
       <p className="mt-3 text-sm text-slate-600 text-pretty">{description}</p>
