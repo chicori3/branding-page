@@ -12,9 +12,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-100 via-white to-slate-50 py-12 sm:py-16">
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-4 sm:px-6 lg:px-8">
-        <section className="relative grid overflow-hidden rounded-[48px] border border-white/60 bg-white/95 p-8 shadow-[0_50px_120px_rgba(15,23,42,0.08)] sm:p-10 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-slate-100 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-32 left-1/3 h-72 w-72 rounded-full bg-cyan-100/60 blur-3xl" />
+        <section className="relative grid overflow-hidden rounded-[48px] border border-white/60 bg-white/95 p-8 shadow-[0_40px_100px_rgba(15,23,42,0.06)] sm:p-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="space-y-7">
             <div className="space-y-3">
               <p className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-400">{siteConfig.role}</p>
