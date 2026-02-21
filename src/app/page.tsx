@@ -12,8 +12,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-100 via-white to-slate-50 py-12 sm:py-16">
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-4 sm:px-6 lg:px-8">
-        <section className="relative grid overflow-hidden rounded-[48px] border border-white/60 bg-white/95 p-8 shadow-[0_40px_100px_rgba(15,23,42,0.06)] sm:p-10 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="space-y-7">
+        <section className="relative overflow-hidden rounded-[48px] border border-white/60 bg-white/95 p-8 shadow-[0_40px_100px_rgba(15,23,42,0.06)] sm:p-10">
+          <div className="space-y-10">
             <div className="space-y-3">
               <p className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-400">{siteConfig.role}</p>
               <h1 className="text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
@@ -40,7 +40,8 @@ export default function Home() {
               <p className="mt-2 text-base font-medium text-slate-700">{siteConfig.philosophy}</p>
             </div>
           </div>
-          <div className="grid auto-rows-fr gap-4 sm:grid-cols-2 xl:grid-cols-3">
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {highlights.map((item) => (
               <KpiCard key={item.title} {...item} />
             ))}

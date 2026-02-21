@@ -27,6 +27,14 @@ export function KpiCard({ title, metric, before, after, description, ariaLabel }
           <dd className="text-sm font-semibold text-emerald-600">{after}</dd>
         </div>
       </dl>
+
+      <div className="mt-3 space-y-2">
+        <div className="h-2 rounded-full bg-slate-100">
+          <div className="h-2 w-3/5 rounded-full bg-emerald-500" aria-hidden="true" />
+        </div>
+        <p className="text-xs text-slate-400">변화 폭을 직관적으로 보여주는 간단한 그래프입니다.</p>
+      </div>
+
       <p className="mt-3 text-sm text-slate-600 text-pretty">{description}</p>
       <div className="mt-auto" />
     </div>
