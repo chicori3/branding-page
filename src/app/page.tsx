@@ -19,7 +19,7 @@ export default function Home() {
                 {siteConfig.headline}
               </h1>
             </div>
-            <p className="max-w-xl text-base leading-relaxed text-slate-600 sm:max-w-2xl sm:text-[0.98rem] whitespace-pre-line">
+            <p className="max-w-lg text-[0.95rem] leading-relaxed text-slate-600 sm:max-w-xl sm:text-base sm:leading-relaxed whitespace-pre-line">
               {siteConfig.summary}
             </p>
             <div className="flex flex-wrap gap-3">
