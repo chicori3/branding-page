@@ -15,21 +15,18 @@ export function KpiCard({ title, metric, before, after, description, ariaLabel }
       aria-label={ariaLabel}
     >
       <p className="text-sm font-medium text-slate-500">{title}</p>
-      <div className="mt-2 flex flex-wrap items-baseline gap-2 text-pretty">
-        <p className="text-3xl font-bold text-slate-900">{metric}</p>
-        <span className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
-          Before vs After
-        </span>
+      <div className="mt-2 flex flex-wrap items-baseline justify-between gap-2 text-pretty">
+        <p className="text-2xl font-semibold text-slate-900 sm:text-[1.6rem]">{metric}</p>
       </div>
-      <dl className="mt-3 grid grid-cols-2 gap-3 text-sm text-slate-600">
+      <dl className="mt-3 grid grid-cols-2 gap-3 text-[0.78rem] text-slate-600">
         <div className="space-y-1 break-words">
-          <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.35em] text-slate-400">
+          <dt className="text-[0.68rem] font-medium text-slate-400">
             Before
           </dt>
           <dd className="text-sm font-semibold text-slate-800">{before}</dd>
         </div>
         <div className="space-y-1 break-words">
-          <dt className="text-[0.7rem] font-semibold uppercase tracking-[0.35em] text-slate-400">
+          <dt className="text-[0.68rem] font-medium text-slate-400">
             After
           </dt>
           <dd className="text-sm font-semibold text-emerald-600">{after}</dd>
@@ -38,7 +35,7 @@ export function KpiCard({ title, metric, before, after, description, ariaLabel }
 
       <div className="mt-3 space-y-3">
         <div className="space-y-1">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-slate-400">Before</p>
+          <p className="text-[0.7rem] font-medium text-slate-400">Before</p>
           <div className="h-2 rounded-full bg-slate-100">
             <div
               className={`h-2 rounded-full bg-slate-400 ${chart.beforeWidth}`}
@@ -47,7 +44,7 @@ export function KpiCard({ title, metric, before, after, description, ariaLabel }
           </div>
         </div>
         <div className="space-y-1">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-slate-400">After</p>
+          <p className="text-[0.7rem] font-medium text-slate-400">After</p>
           <div className="h-2 rounded-full bg-slate-100">
             <div
               className={`h-2 rounded-full ${
@@ -57,10 +54,9 @@ export function KpiCard({ title, metric, before, after, description, ariaLabel }
             />
           </div>
         </div>
-        <p className="text-xs text-slate-400">각 카드의 특성에 맞게 Before/After 비율을 시각적으로 표현했습니다.</p>
       </div>
 
-      <p className="mt-3 text-sm text-slate-600 text-pretty">{description}</p>
+      <p className="mt-3 text-xs text-slate-500">{description}</p>
       <div className="mt-auto" />
     </div>
   );

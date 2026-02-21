@@ -11,13 +11,17 @@ export default function Home() {
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-4 sm:px-6 lg:px-8">
         <section className="relative overflow-hidden rounded-[48px] border border-white/60 bg-white/95 p-8 shadow-[0_40px_100px_rgba(15,23,42,0.06)] sm:p-10">
           <div className="space-y-10">
-            <div className="space-y-3">
-              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-slate-400">{siteConfig.role}</p>
-              <h1 className="text-3xl font-semibold leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
+            <div className="space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400/80">
+                {siteConfig.role}
+              </p>
+              <h1 className="text-3xl font-semibold leading-snug text-slate-900 sm:text-[2.3rem] sm:leading-snug">
                 {siteConfig.headline}
               </h1>
             </div>
-            <p className="max-w-2xl text-lg text-slate-600">{siteConfig.summary}</p>
+            <p className="max-w-xl text-base text-slate-600 sm:text-[0.98rem]">
+              {siteConfig.summary}
+            </p>
             <div className="flex flex-wrap gap-3">
               <a
                 href={siteConfig.resumeUrl}
