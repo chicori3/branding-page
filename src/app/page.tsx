@@ -27,7 +27,7 @@ export default function Home() {
                 href={siteConfig.resumeUrl}
                 className="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
               >
-                레주메 다운로드
+                이력서 보기
               </a>
               <a
                 href={siteConfig.email}
